@@ -1,0 +1,33 @@
+#encabezado{
+    color:white;
+    background-color: black;
+}
+
+.fondo--elixir{
+    /*Background-image: Permite agregar las imagenes como fondo de un contenedor o elemento HTML, también se pueden agregar gradientes*/
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGlI7ILyz9e3tamWxg0--eTS06t8gRSD2qlw&s), radial-gradient(ellipse,rgba(255, 5, 213, 0.358) , rgba(2, 215, 253, 0.434));
+    height: 600px;
+    width: 1000px;
+    /*Bacground-size (cover, contain y width(px)-height(px)
+    Va a especificar el tamaño de la imagen de fondo
+    */
+    background-size:contain;
+    /*background-repeat(repeat, repeat-x,repeat-y, y no repeat
+    Se aplica cuando la imagen es más pequeña que el contenedor*/   
+    background-repeat: no-repeat;
+    border: 5px,solid,rgb(0, 30, 130);
+
+    /*background-position(top, bottom,left,right,center)
+    Establece la posición inicial de la imagen en su contenedor*/ 
+    background-position: bottom center ;
+
+    /*background-attachmente(scroll y fixed)
+    Se utiliza para que la imagen se quede fija en su contenedor cuando unusuario se desplaza por la página*/
+    background-attachment: fixed;
+}
+.fondo--Rana{
+    /*background: (image)(position) /(size)(repeat) (attachment) (color)*/
+    height: 500px;
+    width: 500px;
+    background: url(https://i.etsystatic.com/36990349/r/il/64bc91/4515738741/il_570xN.4515738741_9z6g.jpg) center / contain no-repeat scroll rgba(253, 1, 1, 0.167);
+}
