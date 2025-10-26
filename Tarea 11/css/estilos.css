@@ -1,0 +1,81 @@
+/*Selector HTML*/
+html{
+    font-size: 62.5% /*10px*/;
+}
+body{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+   padding: 0;
+   color: aliceblue;
+   background-image: linear-gradient(to top, white, violet);
+}
+#encabezado{
+   border:2px solid rgb(0, 38, 255);
+   text-align: center;
+   /*Va a valer a uno de nuestro elemento raiz (o sea en este caso 1 rem =10 px, dos rem son 20 */
+   font-size: 2rem;
+}
+/*Orden para los estilos de los estados en los enlaces (LVFHA)
+Una pseudoclase nos permtite aplicar estilos hasta que el usuario haga algo*/
+a:link{
+    color: aqua;
+}
+a:visited{
+    color:red;
+}
+
+a:focus{
+    color: lime;
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+a:hover{
+    color: coral;
+    background-color: brown;
+    border: 0.2rem solid brown;
+}
+
+a:active{
+    color:purple;
+    background-color: white;
+    text-decoration: none;
+
+
+}
+
+#encabezado h1{
+    font-size: 2em; /*2em es como rem pero con el contenedor padre*/
+    background-color: black;
+    
+}
+
+.enlaces{
+    border: 0.5rem dashed purple;
+    font-size: 1.5rem;
+}
+
+.estados-enlaces h2{
+    font-size: 2em;
+    text-align: center;
+    
+}
+
+.estados-enlaces ul{
+    border: 0.2rem solid rgb(59, 255, 154);
+    padding-left: 0;
+}
+
+.estados-enlaces ul li{
+    border: 0.1em solid silver;
+    /*list-styletype(disc, decimal, circle, squeare, lower-roman, lower-alpha, upper-alpha, none )*/
+    list-style-type: square;
+    color: purple;
+    /*list-style-image: url('https://edube.org/uploads/media/default/0001/04/odg_icon_regular.png')*/
+     list-style-image: url('https://edube.org/uploads/media/default/0001/04/oedg_icon_regular.png');
+    /*list-style-position: (inside,outside)*/
+    list-style-position: inside;
+    margin:  0.4rem;
+    padding: 0.3rem;
+    line-height: 1.5;
+}
