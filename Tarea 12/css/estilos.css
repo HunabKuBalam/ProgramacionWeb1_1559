@@ -1,0 +1,112 @@
+html{
+    font-size: 62.5%;/*(10px) rem*/
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.1em;
+    background-color: rgb(155, 21, 155);
+    height: 600vh;
+}
+
+#encabezado{
+    border: 0.5em solid #f013f0;
+    background-color: rgb(43, 101, 226);
+    color: rgb(28, 243, 243);
+    position: sticky;
+    width: 100%;
+    /*Si le indicamos un top con sticky es a partir de donde comienza a funcionar como fijo*/;
+   
+}
+
+#encabezado h1{
+    position: absolute;
+    top:2.5em;
+    left:40%;
+}
+
+.contenedor-logo{
+    width:15%;/*Va a ocupar un 15 %*/
+    height: 15em;
+    border: 0.3em dotted rgb(6, 226, 255);
+    border-radius: 50%;
+
+}
+
+.contenedor-logo img{
+    width:100%;
+    height: 100%;
+    /*min-width: 4em; 
+    Sirve para que la imagen sea aun visible y no se distorcione.
+    También se utilizan min-height. max-width, max-height */
+    object-fit: fill;
+    /*Contain escala la imagen sin que se distorcione, cover cubre todo el contenedor(recorta la imagen y la escala),scale-down se queda con el valor más chico entre
+    cover y contain, fill ajusta al contenedor (distorciona)*/
+    object-position: top right;/*(como background image)Dentro del contenedor mueve la imagen a la posicion que indicamos*/
+    border-radius: 50%;
+
+}
+
+.elementos-posicionados{
+    position: relative;
+    border: 0.5em solid rgb(177, 5, 129);
+    padding: 0.3em;
+}
+.contenedor-imagen{
+    width: 15em;
+    height: 15em;
+    border:0.2em dashed darkorchid;
+}
+
+.contenedor-imagen img{
+    width: 100%;
+    height: 100%;   
+    object-fit: fill;
+}
+
+.imagenhamiltoneliza{
+    position:relative;
+    top: 0em;
+    left: 0em; /*top y left tienen prioridad sobre bottom y right*/
+    z-index: 1;
+}
+
+.imagenlafayette{
+    position:absolute; /*Se quita del flujo de html, como si no existiera*/
+    top:4em; /*Si su contenedor no esta declarado como relative, se va hasta arriba de todo porque no tiene predecesor*/
+    left:15em;
+    z-index: 20;
+}
+
+.imagenhamiltonpapel{
+    position:relative;
+    z-index: 10;
+    /*z-index solo funciona con elementos posicionados*/
+}
+/*filter
+Permitir la manipulación de imagenes, ofreciendo una gama de efectos como::after
+blur()Aplica desenfoque
+brightness(): Ajusta el brillo de un elemento
+contrast(): Modifica el contraste
+grayscale(): Converte al elemento a escla de grises
+invert(): invierte los colores del elemento
+sepia():Aplica un efecto de tono sepia al elemento*/
+
+.imagenhamiltoneliza{
+   filter: blur(0.5em);
+}
+
+.imagenlafayette{
+    
+    filter: grayscale(1);
+}
+
+.imagenhamiltonpapel{
+    filter: sepia(100%)
+}
+
+.imagenlaurens{
+    filter: invert(1);
+}

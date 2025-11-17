@@ -1,0 +1,68 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: radial-gradient(circle, rgb(97, 69, 174), rgb(2, 38, 91));
+    background-repeat: no-repeat;
+}
+
+.contenedor-grid{
+    border: 0.2em solid rgb(45, 0, 128);
+    padding: 0.2em;
+    /*Convertir el contenedor a cuadrícula*/
+    display: grid;
+    width: 30em;
+    height: 30em;
+    /*Se declaran las columnas (tamaño de la cuadrícula)*/
+    /*Aceptan valores fijos relativos, porcentajes, automático y se puede utilizar fr para definir una fracción del espacio disponible */
+    grid-template-columns: 5em 5em 5em ;
+    /*Con cada auto declaro una columna diferente */
+    /*Se declaran los renglones o filas de la cuadrícula*/
+    /*Aceptan valores fijos, relativos, porcentakes auto y se  puede utilizar fr para definir una fracción del espacio disponible*/
+    grid-template-rows:10em 10em;
+    /*Alinear items en la fila (eje en línea) (start, end, center,stretch)*/
+    justify-items: center;
+     /*Alinear items en la fila (eje en columna) (start, end, center,stretch)*/
+    align-items: center;
+
+    /*Existe una propiedad abreviada para justify items y align items que se llama
+    place-items:justify align;
+    place-items: stretch stretch*/
+
+    /*Alinear la cuadrícula a lo largo del eje en líne(fila) (start, end, center stretch, space-betweeen, space-around, space-evenly)*/
+    justify-content: space-around;
+    /*Alinear la cuadrícula a lo largo del eje en líne(columna) (start, end, center stretch, space-betweeen, space-around, space-evenly)*/
+    align-content: space-evenly;
+    gap: 1em;
+}
+
+.objeto-grid{
+    background-color: rgb(33, 203, 11);
+    border:0.1em dashed rgb(239, 189, 189);
+}
+
+.contenedor-grid1{
+    border: 0.2em solid rgb(0, 9, 128);
+    padding: 0.2em;
+    /*Convertir el contenedor a cuadrícula*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-template-rows: auto;
+}
+
+.objeto-grid1{
+    background-color: rgb(210, 255, 152);
+    border:0.1em dashed rgb(231, 12, 12);
+}
+
+/*nth-child selecciona el # objeto */
+.objeto-grid1:nth-child(1){
+    color: rgb(0, 26, 255);
+    grid-column: 1/4;
+    /*con grid column indicamos de qué  linea entre columnas a cual querems que llegue*/
+    grid-row: 2/3;
+}

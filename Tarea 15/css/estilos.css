@@ -1,0 +1,115 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}  
+
+.contenedor-flexible{
+    border: 0.2em solid rgb(18, 10, 239);
+    padding: 0.5em;
+    display: flex;
+    height: 30em;
+    /*flex-direction(row, column, row-reverse, column-reverse)permite establecer la dirección a lo largo de los ejes sobre los cuales queremos alinear a los hijos*/
+    flex-direction: row;
+    /*justify-content(flex-start, flex-end, center, space-between, space-around,space-evenly
+    MAINAXIS(EJE_X)*/
+    /*space-between distribuye uniformemente sin dejar espacio a los lados
+    space-around deja espacioas a los lados 
+    space-evenly-> distribuye todo evenly*/
+    justify-content: space-evenly;
+    /*align-items (flex-start,flex-end,center, stretch,baseline*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-flexible div{
+    background-color: rgb(149, 182, 244);
+    border: 0.1em solid darkmagenta;
+    height: 10em;
+    width: 10em;
+    margin: 0.5em;
+    flex-shrink: 1;
+   
+}
+
+#header-flexible{
+    font-size: medium;
+    display: flex;
+    flex-direction: row ;
+    border: 0.2em solid rgb(10, 7, 218);
+    background-color: rgba(246, 8, 246, 0.759);
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header-flexible img{
+    width:10em;
+    height: 10em;
+    border-radius: 40%;
+    padding: 1em;
+}
+
+#header-flexible h1{
+    font-size: 3em;
+}
+
+#header-flexible nav{
+    border: 0.1em solid red;
+}
+
+#header-flexible ul{
+    border: 0.1em solid rgb(114, 141, 16);
+    list-style-type:none;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+}
+
+#header-flexible ul li{
+    margin: 0.2em;
+}
+
+/*Propiedades flez para objetos flexibles*/
+.objeto1{
+   /*flex-grow: 1;*/
+   order: 1;
+}
+
+.objeto2{
+    order: 4;
+    /*flex-shrink: 0;
+    Se ocupa par distribuir el espacio cuando un contenedor se achica*/
+
+}
+
+.objeto3{
+    /*flex-grow: 1;*/
+    order: 3;
+}
+
+.objeto4{
+
+}
+
+@media screen and (max-width: 750px){
+    #header-flexible ul{
+    border: 0.1em solid rgb(15, 90, 220);
+    list-style-type:none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1em;
+    font-size: 0.8em;
+    }
+
+    #header-flexible h1{
+       font-size:1.5em;
+    }
+
+    #header-flexible img{
+        width: 16%;
+        height: 18%;
+    }
+}

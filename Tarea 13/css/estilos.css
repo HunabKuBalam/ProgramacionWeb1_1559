@@ -1,0 +1,43 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.contenedor-tabla{
+    border: 0.2em, solid, rgb(95, 0, 49);
+    padding: 0.2em;
+    overflow: scroll;
+}
+
+.tabla-alumnos{
+    width: 100%;
+    border-collapse: collapse;
+    font-size:2em ;
+    min-width:40em ;
+
+   
+}
+
+.tabla-alumnos th,td{
+    border: 0.2em, solid, rgb(0, 51, 128);
+    text-align: center;
+    padding:0.2em;
+}
+
+.tabla-alumnos th{
+    background-color: rgb(186, 48, 255);
+    color:white;
+}
+
+.tabla-alumnos tr:hover{
+    background-color: rgb(250, 167, 167);
+}
+.tabla-alumnos tr:nth-child(even){
+    /*Esta pseudoclase selecciona todos los elementos de la tabla alumno pero solo los pares por el even*/
+    background-color: rgb(190, 255, 174);
+}
